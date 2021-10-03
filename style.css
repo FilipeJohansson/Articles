@@ -1,0 +1,99 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    margin: 0 35rem;
+}
+
+section .container {
+    width: 100%;
+    margin: 0;
+}
+
+#details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#author {
+    display: flex;
+    align-items: center;
+}
+
+#author-name {
+    margin-left: .5rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+#author-picture {
+    width: 3rem;
+    border-radius: 100%;
+}
+
+#date {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: hsla(0, 0%, 47%, 1);
+}
+
+#title {
+    margin: 1rem 0;
+    font-size: 2.7rem;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+#description {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+#header .container {
+    width: 100%;
+    margin: 0;
+}
+
+#image {
+    height: 30rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    
+    margin: 1rem 0;
+}
+
+#image img {
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+}
+
+.subtitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+.quote {
+    font-weight: 400;
+    font-style: italic;
+    padding-left: 5rem;
+    padding-right: 1.5rem;
+}
