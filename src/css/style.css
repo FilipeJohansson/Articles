@@ -80,7 +80,7 @@ p {
     line-height: 2.4rem;
 }
 
-.subtitle {
+h2 {
     font-size: 1.6rem;
     font-weight: 600;
     margin: 0;
@@ -95,8 +95,12 @@ blockquote {
     padding-right: 1.5rem;
 }
 
-#article img {
-    margin: 2rem 0;
+#article p img {
+    margin-right: auto!important;
+    margin-left: auto!important;
+    max-width: 100%;
+    height: auto;
+    display: block!important;
 }
 
 strong {
