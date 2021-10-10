@@ -1,3 +1,16 @@
+body {
+  background-color: #f5f5f5;
+}
+
+#article-editor,
+header {
+  background-color: #fff;
+}
+
+header {
+  border-bottom: 1px solid #eceff1;
+}
+
 /*!
  * Quill Editor v1.3.6
  * https://quilljs.com/
