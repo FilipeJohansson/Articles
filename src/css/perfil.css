@@ -15,16 +15,22 @@
 }
 
 #wallpaper {
-    display: table;
+    display: flex;
+    align-items: center;
     width: 100%;
+    overflow: hidden;
     height: 10rem;
     margin-bottom: calc((var(--author)/2)*-1);
-    background: url(test/img2.jpeg) no-repeat bottom center scroll;
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+#wallpaper img {
+    width: 100%;
+    height: auto;
 }
 
 #author{
