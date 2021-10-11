@@ -45,11 +45,11 @@ while ($pub = $pubs->fetch(PDO::FETCH_ASSOC)) {
                 <section id="header">
                     <div id="details">
                         <a href="#" id="author">
-                            <img id="author-picture" src="../src/images/perfil.jpeg">
-                            <span id="author-name">Filipe Deschamps</span>
+                            <img id="author-picture" src="../src/images/picture.jpg">
+                            <span id="author-name">Filipe Johansson</span>
                         </a>
                         <div id="date">
-                            13 Nov 2020
+                            30 Set 2021
                         </div>
                     </div>
                     <h1 id="title">
