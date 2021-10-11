@@ -5,7 +5,7 @@ $thumb = '../src/images/image.jpg';
 <html lang="pt-br">
 
 <head>
-    <title>Preview - <?php echo $title; ?></title>
+    <title>Preview</title>
 
     <!-- Bootstrap v5.0 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -30,6 +30,22 @@ $thumb = '../src/images/image.jpg';
 </head>
 
 <body>
+    <div class="fixed-top" style="
+    top: 75px;
+    left: -225px;
+    width: 600px;
+    height: 40px;
+    margin: 10px;
+    font-size: 24px;
+    text-align: center;
+    color: rgb(255,255,255);
+    transform: rotate(-45deg);
+    transform-origin: 50% 0;
+    background-color: rgb(0,0,0);
+    border: 1px solid rgb(170,170,170);
+    opacity: .5;
+    z-index: 1200;">Visualização</div>
+
     <main class="container">
         <div class="row justify-content-center">
             <div class="col-8 align-self-center">
