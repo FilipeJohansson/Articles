@@ -1,8 +1,14 @@
 <?php
 include_once('../src/php/connection.php');
 
-$pubs = $pdo->prepare("SELECT * FROM article WHERE id = 4");
+$pubs = $pdo->prepare("SELECT * FROM article WHERE id = 8");
 $pubs->execute();
+
+while ($pub = $pubs->fetch(PDO::FETCH_ASSOC)) {
+    $title = $pub['title'];
+    $description = $pub['description'];
+    $article = $pub['text'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -47,15 +53,14 @@ $pubs->execute();
                         </div>
                     </div>
                     <h1 id="title">
-                        Seja Um Programador Melhor: 10 Repositórios SENSACIONAIS no GitHub (Tudo Open Source!)
+                        <?php
+                        echo $title;
+                        ?>
                     </h1>
                     <div id="description">
-                        Eu nunca vi uma lista que agrega tantos repositórios úteis do Github e que tratam desde: 1 —
-                        dicas pra conseguir passar em entrevistas de emprego pra engenharia de software de empresas como
-                        Google, Microsoft, Facebook e Amazon; 2 — listas enormes de tutoriais para você construir por
-                        conta própria o seu, por exemplo, sistema operacional ou sistema de busca; 3 — uma lista
-                        monstruosa de livros gratuitos; 4 — uma série APIs públicas, grátis e sensacionais pra você usar
-                        nos seus programas; e muito mais!
+                        <?php
+                        echo $description;
+                        ?>
                     </div>
                     <div id="image">
                         <img src="../src/images/image.jpg">
@@ -64,10 +69,7 @@ $pubs->execute();
                 <section>
                     <div id="article">
                         <?php
-                            while ($pub = $pubs->fetch(PDO::FETCH_ASSOC)) {
-                                $article = $pub['text'];
-                                echo $article; 
-                            }
+                        echo $article;
                         ?>
                     </div>
                 </section>
