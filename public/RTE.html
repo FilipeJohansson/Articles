@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header id="" class="p-3 fixed-top d-flex align-items-center">
+    <header id="" class="py-1 px-5 fixed-top d-flex align-items-center">
         <div class="col-9">
             <label for="inputTitle" class="form-label">Título</label>
             <input type="text" id="inputTitle" class="form-control d-inline" aria-describedby="titleHelpBlock">
@@ -24,7 +24,7 @@
         </div>
 
         <div>
-            <button id="publish" type="button" class="btn btn-primary btn-lg start-0">Publicar</button>
+            <button id="publish" type="submit" class="btn btn-primary btn-lg start-0 mx-0">Publicar</button>
         </div>
     </header>
 
@@ -85,16 +85,12 @@
                         Se você acha que já está preparado pra isso e está mais a procura de um emprego, chegou a hora do:
                     </div>
                 </div>
-
-                <button id="submit" type="submit">
-                    Enviar
-                </button>
             </section>
         </div>
     </main>
 
     <script>
-        $('body').on('click', '#submit', function() {
+        $('body').on('click', '#publish', function() {
             const editor = document.getElementsByClassName('ql-editor')
             console.log(editor[0].innerHTML)
 
