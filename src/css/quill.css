@@ -9,6 +9,16 @@ header {
 
 header {
   border-bottom: 1px solid #eceff1;
+  display: flex!important;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+}
+
+#publish {
+  float: right;
+  align-self: right;
+  margin: 2rem;
 }
 
 /*!

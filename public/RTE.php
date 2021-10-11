@@ -14,17 +14,17 @@
 </head>
 
 <body>
-    <header id="" class="p-3 fixed-top align-items-center">
+    <header id="" class="p-3 fixed-top d-flex align-items-center">
         <div>
             <label for="inputTitle" class="form-label">Título</label>
-            <input type="text" id="inputTitle" class="form-control" aria-describedby="titleHelpBlock">
+            <input type="text" id="inputTitle" class="form-control d-inline" aria-describedby="titleHelpBlock">
             <div id="titleHelpBlock" class="form-text">
                 Máximo 100 caracteres
             </div>
         </div>
 
         <div>
-            <button type="button" class="btn btn-primary btn-lg">Publicar</button>
+            <button id="publish" type="button" class="btn btn-primary btn-lg start-0">Publicar</button>
         </div>
     </header>
 
@@ -33,7 +33,7 @@
         <div id="scrolling-container" class="pt-4">
             <section class="container mt-3">
                 <div class="pb-3">
-                    <label for="inputDescription" class="form-label">Descrição</label>
+                    <label for="inputDescription" class="form-label mt-3">Descrição</label>
                     <input type="text" id="inputDescription" class="form-control" aria-describedby="descriptionHelpBlock">
                     <div id="descriptionHelpBlock" class="form-text">
                         Máximo 300 caracteres
