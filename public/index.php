@@ -8,6 +8,7 @@ while ($pub = $pubs->fetch(PDO::FETCH_ASSOC)) {
     $title = $pub['title'];
     $description = $pub['description'];
     $article = $pub['text'];
+    $thumb = '../src/images/image.jpg';
 }
 ?>
 <!DOCTYPE html>
@@ -63,7 +64,7 @@ while ($pub = $pubs->fetch(PDO::FETCH_ASSOC)) {
                         ?>
                     </div>
                     <div id="image">
-                        <img src="../src/images/image.jpg">
+                        <img src="<?php echo $thumb; ?>">
                     </div>
                 </section>
                 <section>
