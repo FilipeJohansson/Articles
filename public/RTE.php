@@ -15,8 +15,8 @@
 </head>
 
 <body>
-    <header id="" class="py-1 px-5 fixed-top d-flex align-items-center">
-        <div class="col-9">
+    <header id="" class="fixed-top d-flex align-items-center">
+        <div class="header-title">
             <input type="text" autocomplete="off" id="inputTitle" class="form-control d-inline" aria-describedby="titleHelpBlock" required>
             <label for="inputTitle" class="form-label">Título</label>
             <div id="titleHelpBlock" class="form-text">
@@ -24,8 +24,8 @@
             </div>
         </div>
 
-        <div>
-            <button id="publish" type="submit" class="btn btn-primary btn-lg start-0 mx-0">Publicar</button>
+        <div class="header-buttons">
+            <button id="publish" type="submit" class="btn btn-primary btn-lg start-0 mx-0 my-0">Publicar</button>
         </div>
     </header>
 
