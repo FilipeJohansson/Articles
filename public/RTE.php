@@ -239,7 +239,6 @@
                                ]*/
             },
             scrollingContainer: '#scrolling-container',
-            placeholder: 'Escreva aqui seu artigo',
             theme: 'snow' // or 'bubble'
         });
 
