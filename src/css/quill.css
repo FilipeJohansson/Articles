@@ -25,6 +25,24 @@ header {
   border: 1px solid #eceff1;
 }
 
+.form-control[id="inputTitle"] {
+  font-size: 1.2rem;
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+}
+
+.form-control[id="inputTitle"]:focus {
+  color: rgb(33, 37, 41);
+  background-color: rgb(255, 255, 255);
+  border-color: none;
+  outline: 0px;
+  box-shadow: none;
+  border-bottom: 1px solid #0d6efd;
+  transition: border-bottom .5s;
+}
+
+
 /*!
  * Quill Editor v1.3.6
  * https://quilljs.com/
