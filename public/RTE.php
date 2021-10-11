@@ -7,6 +7,7 @@
     <!-- Include stylesheet -->
     <!-- Bootstrap v5.0 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.snow.css">
     <link rel="stylesheet" href="../src/css/quill.css" title="article">
     <link rel="stylesheet" href="../src/css/style.css" title="article">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -31,7 +32,7 @@
     <!-- Create the editor container -->
     <main class="mt-5 pt-5">
         <div id="scrolling-container" class="pt-4">
-            <section class="container mt-3">
+            <section class="container col-6 mt-3">
                 <div class="pb-3">
                     <label for="inputArticleImage" class="form-label">Capa do Artigo</label>
                     <input type="file" accept=".png, .jpg, .jpeg" class="form-control" id="inputArticleImage" aria-label="Upload">
