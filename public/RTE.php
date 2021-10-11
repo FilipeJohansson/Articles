@@ -216,7 +216,11 @@
             const description = document.getElementById('inputDescription').value
             const editor = document.getElementsByClassName('ql-editor')[0].innerHTML
 
-            window.open('preview.php?title=' + title + '&description=' + description + '&editor=' + editor);
+            localStorage.setItem("title", title)
+            localStorage.setItem("description", description)
+            localStorage.setItem("editor", editor)
+
+            window.open('preview.php')
         });
     </script>
 </body>

@@ -1,7 +1,4 @@
 <?php
-$title = $_GET['title'];
-$description = $_GET['description'];
-$article = $_GET['editor'];
 $thumb = '../src/images/image.jpg';
 ?>
 <!DOCTYPE html>
@@ -47,14 +44,8 @@ $thumb = '../src/images/image.jpg';
                         </div>
                     </div>
                     <h1 id="title">
-                        <?php
-                        echo $title;
-                        ?>
                     </h1>
                     <div id="description">
-                        <?php
-                        echo $description;
-                        ?>
                     </div>
                     <div id="image">
                         <img src="<?php echo $thumb; ?>">
@@ -62,15 +53,24 @@ $thumb = '../src/images/image.jpg';
                 </section>
                 <section>
                     <div id="article">
-                        <?php
-                        echo $article;
-                        ?>
                     </div>
                 </section>
             </div>
         </div>
 
     </main>
+
+    <script>
+        const title = localStorage.getItem("title");
+        const description = localStorage.getItem("description")
+        const editor = localStorage.getItem("editor")
+
+        console.log(editor)
+
+        document.getElementById('title').innerHTML = title
+        document.getElementById('description').innerHTML = description
+        document.getElementById('article').innerHTML = editor
+    </script>
 </body>
 
 </html>
