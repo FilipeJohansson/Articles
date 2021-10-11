@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Full Editor - Quill Rich Text Editor</title>
+    <title>Artigo - Editor</title>
     <!-- Include stylesheet -->
     <!-- Bootstrap v5.0 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -26,14 +26,23 @@
         </div>
 
         <div class="header-buttons">
-            <button id="publish" type="submit" class="btn btn-primary start-0 mx-0 my-0">
+            <div role="button" id="visualize" type="submit" class="btn btn-outline-secondary start-0 mx-2 my-0">
+                <span class="d-flex" style="flex-direction: row; align-items: center;">
+                    Visualizar
+                    <span class="material-icons" style="margin-left: .5rem;">
+                        remove_red_eye
+                    </span>
+                </span>
+            </div>
+
+            <div role="button" id="publish" type="submit" class="btn btn-primary start-0 mx-0 my-0">
                 <span class="d-flex" style="flex-direction: row; align-items: center;">
                     Publicar
                     <span class="material-icons" style="margin-left: .5rem;">
                         send
                     </span>
                 </span>
-            </button>
+            </div>
         </div>
     </header>
 
@@ -158,7 +167,7 @@
         // Save periodically
         setInterval(function() {
             if (change.length() > 0) {
-                console.log('Saving changes', change);
+                // console.log('Saving changes', change);
                 /* 
                 Send partial changes
                 $.post('/your-endpoint', { 
@@ -186,7 +195,7 @@
         $('body').on('click', '#publish', function() {
             const title = document.getElementById('inputTitle').value
             const description = document.getElementById('inputDescription').value
-            const editor = document.getElementsByClassName('ql-editor')
+            const editor = document.getElementsByClassName('ql-editor')[0].innerHTML
 
             $.ajax({
                 type: "POST",
@@ -194,12 +203,20 @@
                 data: {
                     title: title,
                     description: description,
-                    editor: editor[0].innerHTML
+                    editor: editor
                 },
                 success: function(result) {
                     //console.log(result)
                 }
             });
+        });
+
+        $('body').on('click', '#visualize', function() {
+            const title = document.getElementById('inputTitle').value
+            const description = document.getElementById('inputDescription').value
+            const editor = document.getElementsByClassName('ql-editor')[0].innerHTML
+
+            window.open('preview.php?title=' + title + '&description=' + description + '&editor=' + editor);
         });
     </script>
 </body>
