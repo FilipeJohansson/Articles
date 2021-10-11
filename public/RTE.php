@@ -26,10 +26,10 @@
         </div>
 
         <div class="header-buttons">
-            <button id="publish" type="submit" class="btn btn-primary btn-lg start-0 mx-0 my-0">
+            <button id="publish" type="submit" class="btn btn-primary start-0 mx-0 my-0">
                 <span class="d-flex" style="flex-direction: row; align-items: center;">
                     Publicar
-                    <span class="material-icons" style="margin-left: .3rem;">
+                    <span class="material-icons" style="margin-left: .5rem;">
                         send
                     </span>
                 </span>
