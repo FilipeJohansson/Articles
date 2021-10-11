@@ -37,7 +37,7 @@ main {
     color: hsla(0, 0%, 47%, 1);
 }
 
-h1 {
+h1[id="title"] {
     margin: 1rem 0;
     font-size: 2.7rem;
     font-weight: bold;
@@ -80,6 +80,7 @@ p {
     line-height: 2.4rem;
 }
 
+h1,
 h2 {
     font-size: 1.6rem;
     font-weight: 600;
