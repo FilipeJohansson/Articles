@@ -114,27 +114,6 @@
         </div>
     </main>
 
-    <script>
-        $('body').on('click', '#publish', function() {
-            const title = document.getElementById('inputTitle').value
-            const description = document.getElementById('inputDescription').value
-            const editor = document.getElementsByClassName('ql-editor')
-
-            $.ajax({
-                type: "POST",
-                url: "../src/php/sendArticle.php",
-                data: {
-                    title: title,
-                    description: description,
-                    editor: editor[0].innerHTML
-                },
-                success: function(result) {
-                    //console.log(result)
-                }
-            });
-        });
-    </script>
-
     <!-- Include the Quill library -->
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
@@ -145,26 +124,26 @@
             modules: {
                 toolbar: '#toolbar'
                 /*[
-                                   [{
-                                       header: [2, false]
-                                   }],
-                                   ['bold', 'italic', 'underline', 'blockquote'],
-                                   ['link', 'image', 'video'],
-                                   [{
-                                       'align': []
-                                   }],
-                                   [{
-                                       'list': 'ordered'
-                                   }, {
-                                       'list': 'bullet'
-                                   }],
-                                   [{
-                                       'indent': '-1'
-                                   }, {
-                                       'indent': '+1'
-                                   }],
-                                   ['clean']
-                               ]*/
+                    [{
+                        header: [2, false]
+                    }],
+                    ['bold', 'italic', 'underline', 'blockquote'],
+                    ['link', 'image', 'video'],
+                    [{
+                        'align': []
+                    }],
+                    [{
+                        'list': 'ordered'
+                    }, {
+                        'list': 'bullet'
+                    }],
+                    [{
+                        'indent': '-1'
+                    }, {
+                        'indent': '+1'
+                    }],
+                    ['clean']
+                ]*/
             },
             scrollingContainer: '#scrolling-container',
             theme: 'snow' // or 'bubble'
@@ -201,6 +180,27 @@
                 return 'There are unsaved changes. Are you sure you want to leave?';
             }
         }
+    </script>
+
+    <script>
+        $('body').on('click', '#publish', function() {
+            const title = document.getElementById('inputTitle').value
+            const description = document.getElementById('inputDescription').value
+            const editor = document.getElementsByClassName('ql-editor')
+
+            $.ajax({
+                type: "POST",
+                url: "../src/php/sendArticle.php",
+                data: {
+                    title: title,
+                    description: description,
+                    editor: editor[0].innerHTML
+                },
+                success: function(result) {
+                    //console.log(result)
+                }
+            });
+        });
     </script>
 </body>
 

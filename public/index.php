@@ -1,7 +1,7 @@
 <?php
 include_once('../src/php/connection.php');
 
-$pubs = $pdo->prepare("SELECT * FROM article WHERE id = 8");
+$pubs = $pdo->prepare("SELECT * FROM article WHERE id = 12");
 $pubs->execute();
 
 while ($pub = $pubs->fetch(PDO::FETCH_ASSOC)) {
