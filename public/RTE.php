@@ -136,17 +136,20 @@
 
     <script>
         $('body').on('click', '#publish', function () {
+            const title = document.getElementById('inputTitle').value
+            const description = document.getElementById('inputDescription').value
             const editor = document.getElementsByClassName('ql-editor')
-            console.log(editor[0].innerHTML)
 
             $.ajax({
                 type: "POST",
                 url: "../src/php/sendArticle.php",
                 data: {
-                    teste: editor[0].innerHTML
+                    title: title,
+                    description: description,
+                    editor: editor[0].innerHTML
                 },
                 success: function (result) {
-                    console.log(result)
+                    //console.log(result)
                 }
             });
         });

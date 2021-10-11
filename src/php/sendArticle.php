@@ -1,7 +1,10 @@
 <?php
 include_once('./connection.php');
-$text = $_POST['teste'];
-$query = $pdo->prepare("INSERT INTO article (`title`, `description`, `thumb`, `text`) VALUES ('TITULO','DESCRIÇÃO','THUMB','$text');");
+$title = $_POST['title'];
+$description = $_POST['description'];
+$editor = $_POST['editor'];
+
+$query = $pdo->prepare("INSERT INTO article (`title`, `description`, `thumb`, `text`) VALUES ('$title','$description','THUMB','$editor');");
 $result = $query->execute();
 
 if ($result)
