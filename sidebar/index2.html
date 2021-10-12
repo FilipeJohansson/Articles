@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="//cdn.quilljs.com/1.3.6/quill.snow.css">
+    <link rel="stylesheet" href="../src/css/quill.css" title="article">
+    <link rel="stylesheet" href="../src/css/style.css" title="article">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header id="" class="fixed-top d-flex align-items-center">
+            <div class="header-title">
+                <input type="text" autocomplete="off" id="inputTitle" class="form-control d-inline"
+                    aria-describedby="titleHelpBlock" required>
+                <label for="inputTitle" class="form-label">Título</label>
+                <div id="titleHelpBlock" class="form-text">
+                    Máximo 100 caracteres
+                </div>
+            </div>
+
+            <div class="header-buttons">
+                <div role="button" id="visualize" type="submit" class="btn btn-outline-secondary start-0 mx-2 my-0">
+                    <span class="d-flex" style="flex-direction: row; align-items: center;">
+                        Visualizar
+                        <span class="material-icons" style="margin-left: .5rem;">
+                            remove_red_eye
+                        </span>
+                    </span>
+                </div>
+
+                <div role="button" id="publish" type="submit" class="btn btn-primary start-0 mx-0 my-0">
+                    <span class="d-flex" style="flex-direction: row; align-items: center;">
+                        Publicar
+                        <span class="material-icons" style="margin-left: .5rem;">
+                            send
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Bootstrap Sidebar</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Dummy Heading</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" style="height: 100%;">
+                <div>
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+
+            <main class="mt-5" style="height: 94.9%;">
+                <iframe id="iframe" src="./test.html" width="100%" height="100%"></iframe>
+            </main>
+        </div>
+    </div>
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+    <script>
+
+
+
+        window.onload = function () {
+            //console.log(document.getElementById('iframe').contentWindow.document.body.innerHTML)
+            console.log(document.getElementById('iframe').contentWindow.document.getElementsByClassName('ql-editor')[0].innerHTML)
+
+        };
+
+        $('body').on('click', '#publish', function () {
+            console.log(document.getElementById('iframe').contentWindow.document.getElementsByClassName('ql-editor')[0].innerHTML)
+
+            const title = document.getElementById('inputTitle').value
+            const description = document.getElementById('inputDescription').value
+            const editor = document.getElementsByClassName('ql-editor')[0].innerHTML
+
+            $.ajax({
+                type: "POST",
+                url: "../src/php/sendArticle.php",
+                data: {
+                    title: title,
+                    description: description,
+                    editor: editor
+                },
+                success: function (result) {
+                    //console.log(result)
+                }
+            });
+        });
+
+        $('body').on('click', '#visualize', function () {
+            const title = document.getElementById('inputTitle').value
+            const description = document.getElementById('inputDescription').value
+            const editor = document.getElementsByClassName('ql-editor')[0].innerHTML
+
+            localStorage.setItem("title", title)
+            localStorage.setItem("description", description)
+            localStorage.setItem("editor", editor)
+
+            window.open('preview.php')
+        });
+    </script>
+</body>
+
+</html>
